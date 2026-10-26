@@ -17,19 +17,20 @@ export const businessInfo = {
 }
 
 export const navigation = [
-  ['Home', 'home'], ['Services', 'services'], ['Our Work', 'work'],
+  ['Home', 'home'], ['Services', 'services'], ['Gallery', 'gallery'],
   ['Reviews', 'reviews'], ['About', 'about'], ['Contact', 'contact'],
 ]
 
-// PLACEHOLDER: All marketing copy and benefit labels require client approval.
+// Client-approved headline, company statement, About paragraphs, and mission.
+// Supporting introduction and benefit labels remain draft marketing copy.
 export const companyCopy = {
   hero: ['A cleaner space.', 'A clearer mind.'],
-  introduction: 'Make room for what matters. Dependable, detail-focused cleaning for your home and workplace, with a personal touch from start to finish.',
+  introduction: 'Make room for what matters. Dependable, detail-focused cleaning for homes, businesses, and industrial facilities, with a personal touch from start to finish.',
   benefits: ['Reliable service', 'Attention to detail', 'Professional care', 'Free estimates'],
-  about: 'We believe a clean space changes how your day feels. Our approach is simple: listen to what you need, care for the details, and treat your space with respect.',
-  values: [
-    ['The details make the difference', 'Thoughtful care for the little things that make a space feel truly clean.'],
-    ['Real people. Clear communication.', 'A friendly conversation, clear expectations, and a plan for your space.'],
-    ['Pride in every space', 'A considered approach to your home, your workplace, and your peace of mind.'],
+  statement: 'Trusted by families, businesses, and industrial facilities, Fearless Solutions Management delivers reliable cleaning services built on professionalism, respect, and consistent results.',
+  about: [
+    'Fearless Solutions Management is committed to delivering dependable, high-quality cleaning services for homes, businesses, and industrial facilities. We take pride in showing up with professionalism, working with respect, and providing results that make every space cleaner, more comfortable, and well cared for.',
+    "Our team follows consistent cleaning standards and proper methods to help ensure every job is done right. Whether we're maintaining a family home, an office, or a warehouse, we focus on reliability, integrity, and the kind of care our clients can trust.",
   ],
+  mission: 'Our mission is to provide trustworthy, high-quality cleaning solutions that customers can rely on. We show up with professionalism, work with respect, and deliver results that make a real difference in the spaces people live and work in.',
 }

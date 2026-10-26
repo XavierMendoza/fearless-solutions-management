@@ -1,7 +1,7 @@
 // PLACEHOLDER: Section marketing copy is for the client preview and needs approval.
-import { House, Building2, Sparkles, KeyRound, BriefcaseBusiness, CalendarDays, ArrowUpRight } from 'lucide-react'
+import { House, Building2, Factory, KeyRound, BriefcaseBusiness, CalendarDays, ArrowUpRight } from 'lucide-react'
 import { services } from '../data/services'
-const icons = { House, Building2, Sparkles, KeyRound, BriefcaseBusiness, CalendarDays }
+const icons = { House, Building2, Factory, KeyRound, BriefcaseBusiness, CalendarDays }
 export default function Services() {
   return <section id="services" className="section container">
     <div className="section-heading"><div><p className="eyebrow">A CLEAN FOR EVERY KIND OF SPACE</p><h2>Your space. Your needs.<br /><span>Our attention to detail.</span></h2></div><p>From everyday upkeep to a fresh start,<br className="desktop-break" /> find the right clean for your life.</p></div>

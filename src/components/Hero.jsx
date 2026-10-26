@@ -12,7 +12,7 @@ export default function Hero() {
         <h1>{companyCopy.hero[0]}<br /><span>{companyCopy.hero[1]}</span></h1>
         <p className="hero-description">{companyCopy.introduction}</p>
         <div className="button-row"><a className="button" href="#contact">{businessInfo.cta.quote}<ArrowUpRight size={19} /></a><a className="button button-outline" href={businessInfo.phones[0].href}><Phone size={17} />{businessInfo.cta.call}</a></div>
-        <div className="hero-signoff"><Sparkles size={20} /><p>{businessInfo.tagline}</p></div>
+        <div className="hero-signoff"><p>{businessInfo.tagline}</p></div>
       </div>
       <div className="hero-note"><span className="note-icon"><Sparkles /></span><div><strong>A fresh space. A better day.</strong><span>Thoughtful care, down to the details.</span></div></div>
     </div>

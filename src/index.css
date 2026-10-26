@@ -6,9 +6,9 @@
   font-synthesis:none;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing:antialiased;
-  --color-primary:#1762cd;
-  --color-primary-dark:#102c47;
-  --color-accent:#54bfdb;
+  --color-primary:#1759c4;
+  --color-primary-dark:#102849;
+  --color-accent:#38bce8;
   --color-background:#fff;
   --color-surface:#f3f7fa;
   --color-text:#18344d;
@@ -214,18 +214,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 }
 
 .brand-mark {
-  background:var(--color-primary-dark);
-  color:white;
-  width:40px;
-  height:44px;
-  border-radius:11px 4px 11px 4px;
-  display:grid;
-  place-items:center;
-}
-
-.brand-mark svg {
-  width:27px;
-  height:27px;
+  width:58px;
+  height:60px;
+  object-fit:contain;
+  flex-shrink:0;
 }
 
 .brand-subtitle {
@@ -346,7 +338,8 @@ h1 span {
 }
 
 .hero-signoff p {
-  font-size:11px;
+  font-weight:600;
+  font-size:14px;
   color:#425a70;
 }
 
@@ -401,6 +394,14 @@ h1 span {
 .trust-strip {
   border-bottom:1px solid var(--color-border);
   background:white;
+}
+
+.company-statement {
+  max-width:850px;
+  padding-top:32px;
+  text-align:center;
+  font-size:clamp(15px,1.5vw,18px);
+  color:var(--color-text);
 }
 
 .trust-grid {
@@ -724,8 +725,8 @@ h1 span {
 }
 
 .about-seal span {
-  font-size:11px;
-  max-width:155px;
+  font-size:14px;
+  max-width:260px;
   line-height:1.8;
   color:#d2e0ec;
 }
@@ -735,30 +736,26 @@ h1 span {
   color:#c5d3df;
 }
 
-.values {
-  display:grid;
-  gap:22px;
-  margin-top:29px;
+.about-copy>p+p {
+  margin-top:20px;
 }
 
-.values>div {
-  display:flex;
-  gap:13px;
+.mission {
+  margin-top:26px;
+  padding:20px 23px;
+  border-left:2px solid var(--color-accent);
+  background:#ffffff08;
+  border-radius:0 6px 6px 0;
 }
 
-.values>div>svg {
-  color:#79c5e0;
-  margin-top:2px;
+.mission h3 {
+  font-size:15px;
+  margin-bottom:9px;
 }
 
-.values h3 {
-  font-size:14px;
-  margin-bottom:6px;
-}
-
-.values p {
-  font-size:12px;
-  color:#b1c2d1;
+.mission p {
+  font-size:13px;
+  color:#c5d3df;
 }
 
 .owner-line {
@@ -979,11 +976,6 @@ form .form-notice {
   color:var(--color-primary);
 }
 
-.contact-copy .contact-tagline {
-  font-size:11px!important;
-  margin-top:30px!important;
-}
-
 .quote-form {
   background:#fff;
   border:1px solid #e2eaf1;
@@ -1087,8 +1079,8 @@ form .form-notice {
     font-size:6.5px;
   }
   .brand-mark {
-    width:35px;
-    height:40px;
+    width:48px;
+    height:50px;
   }
   .nav-bar {
     gap:20px;
@@ -1321,7 +1313,7 @@ form .form-notice {
     margin-top:24px;
   }
   .hero-signoff p {
-    font-size:9px;
+    font-size:12px;
   }
   .hero-picture {
     position:relative;
@@ -1484,7 +1476,7 @@ form .form-notice {
   }
   .about-seal span {
     max-width:none;
-    font-size:10px;
+    font-size:12px;
   }
   .about-seal svg {
     width:25px;
