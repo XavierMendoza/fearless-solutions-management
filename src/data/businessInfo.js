@@ -9,8 +9,6 @@ export const businessInfo = {
   ],
   email: 'fearless_solutions@yahoo.com',
   // PLACEHOLDER: Add client-approved URLs and service area before launch.
-  googleReviewUrl: '',
-  yelpUrl: '',
   socialLinks: [],
   serviceArea: '',
   cta: { quote: 'Get a Free Quote', call: 'Call Now' },

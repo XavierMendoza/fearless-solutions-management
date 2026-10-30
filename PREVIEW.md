@@ -1,7 +1,7 @@
 # Fearless Solutions Management — client preview
 
 Run `npm run dev` to preview, `npm run build` to produce the static frontend,
-and `npm run lint` to check source code. No backend or deployment is configured.
+and `npm run lint` to check source code. The live site is hosted on Vercel. This repository remains frontend-only.
 
 ## Branding and content
 
@@ -19,17 +19,36 @@ and `npm run lint` to check source code. No backend or deployment is configured.
 - `src/data/gallery.js` imports the seven supplied local Pexels assets. These are
   stock inspiration, not a portfolio of completed company jobs. Credits and usage
   notes are in `PHOTO_SOURCES.md`, which is not part of the public build.
-- `src/data/testimonials.js` contains three fictional samples. The page explicitly
-  labels these as fictional and unverified. Replace them with genuine approved
-  reviews before public launch.
+- `src/components/Testimonials.jsx` now shows Google and Yelp platform cards with
+  honest empty preview areas, plus a reserved Website reviews area. Fictional
+  testimonials have been removed. No ratings, counts, widgets, or APIs are used.
+
+## External review links (Phase 1)
+
+Add verified HTTPS URLs to `src/data/reviewLinks.js`:
+
+- `googleBusinessUrl`: public Google Business Profile / read-reviews destination.
+- `googleWriteReviewUrl`: the separate Google write-review destination.
+- `yelpBusinessUrl`: public Yelp business profile, once approved and verified.
+
+All three start empty. Each action checks its own URL. Missing or invalid URLs
+show “Profile link coming soon” rather than a link. Valid links open a new tab
+with `rel="noopener noreferrer"`. The optional footer Google link uses the same
+`googleBusinessUrl`. Do not put review URLs in `businessInfo.js`.
+
+Yelp offers only “View Reviews on Yelp”; never solicit Yelp reviews. See
+[Yelp guidance](https://www.yelp-support.com/article/Don-t-Ask-for-Reviews?l=en_GB).
+Genuine previews can be added later using approved content or official embeds.
+The separate website review system will later use Django/DRF and PostgreSQL on
+Railway; this phase adds no submission form, storage, or backend for it.
 
 ## Forms and future launch
 
 Both forms use native browser validation. Their shared submit handler in
 `src/utils/previewSubmit.js` only displays a demo notice. Nothing is sent or saved.
 Only report delivery after an approved provider confirms receipt in a later pass.
-The Google review button stays disabled until a real URL is supplied. Yelp,
-social URLs, and service area remain empty; no integrations were added.
+Review URLs, social URLs, and service area remain empty. The existing private
+feedback and quote forms are unchanged demos, separate from future public reviews.
 
 The preview retains `noindex, nofollow`. Remove that only when approved for launch.
 Final sharing URL/image metadata remains pending. No address, hours, credentials,

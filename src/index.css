@@ -603,89 +603,120 @@ h1 span {
 
 .reviews-grid {
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(2,minmax(0,1fr));
   gap:22px;
 }
 
 .review-card {
+  min-width:0;
   border:1px solid var(--color-border);
   border-radius:var(--radius);
   padding:28px;
   display:flex;
   flex-direction:column;
+  background:var(--color-background);
+  box-shadow:var(--shadow);
 }
 
-.review-top {
+.review-platform-heading {
   display:flex;
   align-items:center;
   justify-content:space-between;
-  color:#d2e1ee;
+  flex-wrap:wrap;
+  gap:12px 24px;
+  margin-bottom:18px;
 }
 
-.stars {
+.review-platform-heading h3 {
+  font-size:17px;
+}
+
+.platform-wordmark {
+  font-size:30px;
+  font-weight:700;
+  letter-spacing:-1.5px;
+  line-height:1.2;
+}
+
+.google-wordmark span:nth-child(1),.google-wordmark span:nth-child(4) { color:#4285f4; }
+.google-wordmark span:nth-child(2),.google-wordmark span:nth-child(6) { color:#ea4335; }
+.google-wordmark span:nth-child(3) { color:#fbbc05; }
+.google-wordmark span:nth-child(5) { color:#34a853; }
+.yelp-wordmark { color:#d32323; font-size:34px; letter-spacing:-2px; }
+
+.review-description {
+  font-size:13px;
+  margin-bottom:24px;
+}
+
+.review-preview {
   display:flex;
-  gap:3px;
-  color:#2574ca;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:180px;
+  padding:26px 20px;
+  border:1px dashed #bdcfdf;
+  border-radius:8px;
+  background:var(--color-surface);
+  text-align:center;
+  margin-top:auto;
 }
 
-.review-card blockquote {
-  font-size:14px;
-  line-height:1.85;
-  margin:20px 0 27px;
-  flex:1;
-}
+.review-preview svg { color:var(--color-primary); }
+.review-preview strong { font-size:14px; }
+.review-preview p { font-size:12px; max-width:230px; }
 
-.review-person {
+.review-actions {
   display:flex;
+  flex-wrap:wrap;
   align-items:center;
   gap:12px;
+  padding-top:22px;
 }
 
-.avatar {
-  display:grid;
-  place-items:center;
-  background:#eaf2f8;
-  width:38px;
-  height:38px;
-  border-radius:50%;
-  font-size:13px;
-  font-weight:600;
-}
-
-.review-person strong {
+.review-actions .button {
   font-size:12px;
-  display:block;
+  gap:10px;
+  padding:12px 16px;
+  min-height:46px;
 }
 
-.review-person div>span {
-  display:block;
-  font-size:10px;
+.review-link-pending {
+  font-size:12px;
   color:var(--color-muted);
-  margin-top:5px;
+  padding-block:10px;
 }
 
-.review-invite {
+.website-reviews {
   display:flex;
-  justify-content:center;
   align-items:center;
-  gap:40px;
-  margin-top:36px;
+  gap:18px;
+  flex-wrap:wrap;
+  padding:25px 28px;
+  margin-top:24px;
+  background:var(--color-surface);
+  border:1px solid var(--color-border);
+  border-radius:var(--radius);
 }
 
-.review-invite strong {
-  font-size:14px;
-}
+.website-reviews>svg { color:var(--color-primary); }
+.website-reviews>div { flex:1 1 240px; }
+.website-reviews h3 { font-size:16px; margin-bottom:5px; }
+.website-reviews p { font-size:12px; }
+.review-coming-soon { font-size:11px; color:var(--color-muted); }
 
-.review-invite p {
-  font-size:12px;
-}
-
-.availability {
-  display:block;
-  font-size:10px;
-  color:var(--color-muted);
-  text-align:center;
-  margin-top:7px;
+.sr-only {
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip-path:inset(50%);
+  white-space:nowrap;
+  border:0;
 }
 
 /* Company */
@@ -1211,15 +1242,6 @@ form .form-notice {
   .review-card {
     padding:19px;
   }
-  .review-card blockquote {
-    font-size:12px;
-  }
-  .review-person {
-    gap:8px;
-  }
-  .review-person div>span {
-    font-size:9px;
-  }
   .about-grid {
     gap:35px;
   }
@@ -1430,36 +1452,6 @@ form .form-notice {
   }
   .review-card {
     padding:25px;
-  }
-  .review-card blockquote {
-    font-size:14px;
-    margin-block:16px 23px;
-  }
-  .review-person div>span {
-    font-size:10px;
-  }
-  .review-invite {
-    gap:16px;
-    justify-content:space-between;
-    align-items:flex-start;
-  }
-  .review-invite strong {
-    font-size:12px;
-  }
-  .review-invite p {
-    font-size:11px;
-  }
-  .review-invite .button {
-    font-size:10px;
-    padding:12px;
-    gap:8px;
-    min-height:44px;
-  }
-  .review-invite .button svg {
-    width:14px;
-  }
-  .availability {
-    font-size:9px;
   }
   .about-section {
     padding-block:57px;
