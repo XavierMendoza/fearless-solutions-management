@@ -16,7 +16,7 @@ const platforms = [
     name: 'Yelp',
     description: 'Discover Fearless Solutions Management on Yelp and explore customer perspectives on our services.',
     // Yelp is for discovery only. Do not add a request to write a Yelp review.
-    actions: [{ label: 'View Reviews on Yelp', key: 'yelpBusinessUrl' }],
+    actions: [{ label: 'View Yelp Reviews', key: 'yelpBusinessUrl' }],
   },
 ]
 
