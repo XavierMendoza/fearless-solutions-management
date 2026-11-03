@@ -6,7 +6,7 @@ export default function Hero() {
   const [mottoLead, mottoPurpose] = businessInfo.tagline.split('. ')
 
   return <section id="home" className="hero">
-    <div className="hero-picture"><img src={heroImage.src} alt={heroImage.alt} fetchPriority="high" /><span className="photo-caption">A little inspiration for a fresher space</span></div>
+    <div className="hero-picture"><img src={heroImage.src} alt={heroImage.alt} fetchPriority="high" /></div>
     <div className="container hero-inner">
       <div className="hero-copy">
         <p className="eyebrow"><span /> A FRESH START BEGINS HERE</p>

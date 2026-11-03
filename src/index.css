@@ -274,18 +274,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   background:linear-gradient(90deg,#f1f5f7 0%,#f1f5f7de 10%,#f1f5f750 36%,transparent 65%);
 }
 
-.photo-caption {
-  position:absolute;
-  bottom:18px;
-  right:30px;
-  color:white;
-  background:#102c4780;
-  padding:5px 10px;
-  border-radius:3px;
-  font-size:9px;
-  z-index:1;
-}
-
 .hero-inner {
   position:relative;
   min-height:635px;
@@ -524,14 +512,6 @@ h1 span {
 /* Gallery */
 .gallery-section {
   background:var(--color-surface);
-}
-
-.quiet-label {
-  display:block;
-  color:#627589;
-  font-size:10px;
-  line-height:1.6;
-  margin-top:10px;
 }
 
 .gallery-grid {
@@ -1306,11 +1286,6 @@ form .form-notice {
   }
   .hero-picture:after {
     background:linear-gradient(transparent 65%,#142b4740);
-  }
-  .photo-caption {
-    right:10px;
-    bottom:10px;
-    font-size:8px;
   }
   .hero-note,.hero-explore {
     display:none;
