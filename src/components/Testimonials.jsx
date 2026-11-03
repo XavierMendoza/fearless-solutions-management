@@ -1,20 +1,20 @@
-import { ArrowUpRight, MessageSquareText } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { reviewLinks, externalReviewUrl } from '../data/reviewLinks'
 
 const platforms = [
   {
     id: 'google',
     name: 'Google',
-    description: 'Explore customer experiences on Google, or share your own experience with Fearless Solutions Management.',
+    description: 'Read what customers share about our cleaning services on Google. Have an experience to share? We welcome your feedback.',
     actions: [
       { label: 'Read Google Reviews', key: 'googleBusinessUrl' },
-      { label: 'Leave a Google Review', key: 'googleWriteReviewUrl' },
+      { label: 'Leave a Google Review', key: 'googleWriteReviewUrl', secondary: true },
     ],
   },
   {
     id: 'yelp',
     name: 'Yelp',
-    description: 'Discover Fearless Solutions Management on Yelp and explore customer perspectives on our services.',
+    description: 'Get to know Fearless Solutions Management on Yelp and read about customer experiences with our cleaning services.',
     // Yelp is for discovery only. Do not add a request to write a Yelp review.
     actions: [{ label: 'View Yelp Reviews', key: 'yelpBusinessUrl' }],
   },
@@ -46,14 +46,8 @@ export default function Testimonials() {
             <h3 id={`${platform.id}-reviews-title`}>{platform.name} Reviews</h3>
           </div>
           <p className="review-description">{platform.description}</p>
-          {/* Reserved for genuine, approved previews; Yelp may use an official embed later. */}
-          <div className="review-preview" aria-label={`${platform.name} review preview availability`}>
-            <MessageSquareText size={25} aria-hidden="true" />
-            <strong>Customer perspectives</strong>
-            <p>Review previews will appear here when available.</p>
-          </div>
           <div className="review-actions">
-            {available.map(action => <a key={action.key} className="button button-outline" href={action.url} target="_blank" rel="noopener noreferrer">
+            {available.map(action => <a key={action.key} className={`button${action.secondary ? ' button-outline' : ''}`} href={action.url} target="_blank" rel="noopener noreferrer">
               {action.label}<ArrowUpRight size={17} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span>
             </a>)}
             {available.length === 0
@@ -63,11 +57,5 @@ export default function Testimonials() {
         </article>
       })}
     </div>
-    {/* Reserved for the separate website review system. No form or backend in Phase 1. */}
-    <aside className="website-reviews" aria-labelledby="website-reviews-title">
-      <MessageSquareText size={23} aria-hidden="true" />
-      <div><h3 id="website-reviews-title">Website reviews</h3><p>A dedicated space for customer experiences, right here.</p></div>
-      <span className="review-coming-soon">Coming soon</span>
-    </aside>
   </section>
 }
