@@ -753,7 +753,7 @@ h1 span {
   display:flex;
 }
 
-/* Forms and feedback */
+/* Contact and private feedback */
 .feedback-section {
   padding-block:46px;
   display:grid;
@@ -813,73 +813,58 @@ h1 span {
   background:var(--color-surface);
 }
 
-.feedback-form {
+.feedback-options {
   padding:25px;
   background:var(--color-surface);
   border-radius:0 0 12px 12px;
 }
 
-.form-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
+.contact-help {
+  font-size:14px;
+  margin:14px 0 20px;
 }
 
-label {
-  display:block;
-  font-size:11px;
-  font-weight:600;
-  line-height:1.6;
+.quote-options .button,.feedback-options .button {
+  min-height:48px;
+  max-width:100%;
+  gap:10px;
 }
 
-label>span {
-  font-weight:400;
-  color:var(--color-muted);
-}
-
-input,select,textarea {
-  display:block;
-  width:100%;
-  border:1px solid var(--color-border);
-  border-radius:5px;
-  background:#fff;
-  padding:12px 13px;
-  color:var(--color-text);
-  font-size:12px;
-  margin-top:7px;
-  min-height:45px;
-}
-
-textarea {
-  resize:vertical;
-  min-height:110px;
-}
-
-input::placeholder,textarea::placeholder {
-  color:#7a8895;
-}
-
-form>label {
-  margin-top:20px;
-}
-
-form>.button {
-  margin-top:22px;
-}
-
-form .form-notice {
-  font-size:11px;
-  line-height:1.7;
-  margin:10px 0 23px;
-}
-
-.form-status {
-  font-size:12px;
+.email-contact {
   margin-top:14px;
 }
 
-.form-status:empty {
-  display:none;
+.email-contact>.button {
+  width:100%;
+}
+
+.email-fallback {
+  padding:16px;
+  background:var(--color-surface);
+  border-radius:8px;
+}
+
+.email-fallback p,.feedback-options>p {
+  font-size:14px;
+}
+
+.email-fallback .button {
+  width:100%;
+  font-size:12px;
+  padding:12px 14px;
+}
+
+.copyable-email {
+  display:block;
+  margin:12px 0;
+  color:var(--color-text);
+  font-size:13px;
+  overflow-wrap:anywhere;
+  user-select:all;
+}
+
+.copy-status {
+  margin-top:12px;
 }
 
 .contact-section {
@@ -932,6 +917,7 @@ form .form-notice {
   align-items:center;
   gap:12px;
   font-size:14px;
+  min-height:44px;
   overflow-wrap:anywhere;
 }
 
@@ -943,7 +929,7 @@ form .form-notice {
   color:var(--color-primary);
 }
 
-.quote-form {
+.quote-options {
   background:#fff;
   border:1px solid #e2eaf1;
   border-radius:var(--radius);
@@ -951,14 +937,21 @@ form .form-notice {
   box-shadow:var(--shadow);
 }
 
-.quote-form h3 {
+.quote-options h3 {
   font-size:22px;
   letter-spacing:-.6px;
 }
 
-.quote-form>.button {
+.quote-options>.button {
   width:100%;
-  justify-content:space-between;
+  justify-content:center;
+}
+
+.footer-contact a {
+  display:inline-flex;
+  align-items:center;
+  min-height:44px;
+  overflow-wrap:anywhere;
 }
 
 /* Footer */
@@ -1191,7 +1184,7 @@ form .form-notice {
   .contact-copy {
     max-width:600px;
   }
-  .quote-form {
+  .quote-options {
     padding:30px;
   }
   .footer-top {
@@ -1422,28 +1415,17 @@ form .form-notice {
   .feedback-details {
     width:100%;
   }
-  .feedback-form {
+  .feedback-options {
     padding:20px 15px;
   }
   .contact-copy h2 {
     font-size:43px;
   }
-  .quote-form {
+  .quote-options {
     padding:24px 20px;
   }
-  .quote-form h3 {
+  .quote-options h3 {
     font-size:20px;
-  }
-  .form-grid {
-    grid-template-columns:1fr;
-    gap:17px;
-  }
-  input,select,textarea {
-    font-size:16px;
-    min-height:48px;
-  }
-  label {
-    font-size:12px;
   }
   .contact-links a {
     font-size:13px;
