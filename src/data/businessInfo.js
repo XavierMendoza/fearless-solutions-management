@@ -8,9 +8,9 @@ export const businessInfo = {
     { display: '562-939-1767', href: 'tel:+15629391767' },
   ],
   email: 'fearless_solutions@yahoo.com',
-  // PLACEHOLDER: Add client-approved URLs and service area before launch.
+  // Additional social profiles and named service areas require client confirmation.
   socialLinks: [],
-  serviceArea: '',
+  serviceArea: 'Montclair, CA and surrounding communities',
   cta: { quote: 'Get a Free Quote', call: 'Call Now' },
 }
 
@@ -23,7 +23,7 @@ export const navigation = [
 // Supporting introduction and benefit labels remain draft marketing copy.
 export const companyCopy = {
   hero: ['A cleaner space.', 'A clearer mind.'],
-  introduction: 'Make room for what matters. Dependable, detail-focused cleaning for homes, businesses, and industrial facilities, with a personal touch from start to finish.',
+  introduction: 'Make room for what matters. Residential, commercial, office, and industrial cleaning in Montclair, CA and surrounding communities, with a personal touch from start to finish.',
   benefits: ['Reliable service', 'Attention to detail', 'Professional care', 'Free estimates'],
   statement: 'Trusted by families, businesses, and industrial facilities, Fearless Solutions Management delivers reliable cleaning services built on professionalism, respect, and consistent results.',
   about: [
